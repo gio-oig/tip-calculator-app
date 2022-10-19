@@ -1,38 +1,42 @@
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(186, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(180, 37%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
+  row-gap: 87px;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: var(--light-grayish-cyan);
 }
 
-.App-link {
-  color: #61dafb;
+.calc-container {
+  display: flex;
+  padding: 32px;
+  width: 920px;
+  height: 481px;
+
+  box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+  border-radius: 25px;
+  background: var(--white);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calc__calculator {
+  flex: 1;
+  background-color: yellow;
 }
