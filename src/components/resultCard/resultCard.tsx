@@ -1,11 +1,30 @@
+import classNames from "classnames";
 import "./resultCard.css";
 
-const ResultCard = () => {
+type ResultCardProps = {
+  tipAmount: number;
+  total: number;
+  isResetable: boolean;
+  resetInputData: () => void;
+};
+
+const ResultCard = ({
+  tipAmount,
+  total,
+  isResetable,
+  resetInputData,
+}: ResultCardProps) => {
+  const reserBtnClass = classNames("result__row__button", {
+    "button--inactive": !isResetable,
+  });
+
   return (
     <div className="calc__result">
-      <ResultRow amount={5} />
-      <ResultRow amount={5} />
-      <button className="result__row__button button--inactive">reset</button>
+      <ResultRow amount={tipAmount} />
+      <ResultRow amount={total} />
+      <button className={reserBtnClass} onClick={resetInputData}>
+        reset
+      </button>
     </div>
   );
 };

@@ -1,9 +1,10 @@
 .calc__result {
+  max-width: 413px;
+  flex-basis: 413px;
   padding: 40px;
   display: flex;
   flex-direction: column;
   row-gap: 25px;
-  flex: 1;
   border-radius: 15px;
   background-color: var(--very-dark-cyan);
 }
@@ -56,4 +57,17 @@
 .button--inactive {
   background-color: hsl(183, 79%, 24%);
   color: var(--very-dark-cyan);
+}
+
+@media (max-width: 450px) {
+  .calc__result {
+    row-gap: 20px;
+  }
+  .row__price {
+    font-size: 32px;
+  }
+
+  .result__row__button {
+    margin-top: unset;
+  }
 }

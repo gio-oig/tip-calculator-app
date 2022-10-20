@@ -1,62 +1,5 @@
-:root {
-  --strong-cyan: hsl(172, 67%, 45%);
-
-  --very-dark-cyan: hsl(183, 100%, 15%);
-  --dark-grayish-cyan: hsl(186, 14%, 43%);
-  --grayish-cyan: hsl(186, 14%, 56%);
-  --light-grayish-cyan: rgb(197, 228, 231);
-  --very-light-grayish-cyan: hsl(180, 37%, 97%);
-  --white: hsl(0, 0%, 100%);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.App {
-  min-height: 100vh;
-  display: flex;
-  row-gap: 87px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--light-grayish-cyan);
-}
-
-.calc-container {
-  display: flex;
-  padding: 32px 32px 32px 48px;
-  max-width: 920px;
-  width: 100%;
-  height: 481px;
-  column-gap: 48px;
-
-  box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
-  border-radius: 25px;
-  background: var(--white);
-}
-
-.tip-card .input-label {
-  margin-bottom: 16px;
-}
-
 .calc__input-card {
   flex: 1;
-  display: grid;
-  row-gap: 40px;
 }
 
 .form-controll__heder {
@@ -127,7 +70,7 @@ input[type="number"] {
 
 .input-card__select-box-container {
   display: grid;
-  grid-template-columns: repeat(3, minmax(80px, 117px));
+  grid-template-columns: repeat(3, 1fr);
   gap: 14px;
 }
 
@@ -152,50 +95,4 @@ input[type="number"] {
 .select-box.select-box--selected {
   color: var(--very-dark-cyan);
   background-color: hsl(173, 61%, 77%);
-}
-
-@media screen and (max-width: 700px) {
-  .calc-container {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .input-container {
-    max-width: 100%;
-  }
-
-  .calc__input-card {
-    margin-bottom: 32px;
-  }
-
-  .calc__result {
-    max-width: 100%;
-  }
-
-  .logo {
-    margin-top: 50px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .App {
-    row-gap: 40px;
-  }
-
-  .calc-container {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  .calc-container {
-    padding: 32px 24px;
-  }
-
-  .input-card__select-box-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .select-box {
-    max-width: 100%;
-  }
 }
